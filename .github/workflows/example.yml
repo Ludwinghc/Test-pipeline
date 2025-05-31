@@ -6,7 +6,7 @@ on: # Eventos que disparan la ejecución del pipeline
 
 jobs: # Bloques de tareas independientes
   build-and-test: # ID del job (único)
-    runs-on: ubuntu:latest # Maquina virtual donde se ejecuta el pipeline
+    runs-on: ubuntu-latest # Maquina virtual donde se ejecuta el pipeline
 
     steps: # Pasos secuenciales dentro del job
       - name: Checkout repository # Nombre del paso 1
