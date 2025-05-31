@@ -1,0 +1,17 @@
+name: First pipeline # Nombre del pipeline
+
+on: # Eventos que disparan la ejecución del pipeline
+  push: 
+    branches: ["main"]
+
+jobs: # Bloques de tareas independientes
+  build-and-test: # ID del job (único)
+    runs-on: ubuntu:latest # Maquina virtual donde se ejecuta el pipeline
+
+    steps: # Pasos secuenciales dentro del job
+      - name: Checkout repository # Nombre del paso 1
+        uses: actions/checkout@v4 # usa un action oficial que clona el repositorio dentro del entorno del job
+
+      - name: Imprimir mensaje
+        run: |
+          echo "Hola este es un primer pipeline"
